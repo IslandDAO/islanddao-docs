@@ -6,16 +6,16 @@
   "compatibility_flags": ["nodejs_compat"],
   "assets": {
     "binding": "ASSETS",
-    "directory": "./dist"
+    "directory": "./dist",
   },
   "observability": {
-    "enabled": true
+    "enabled": true,
   },
   "preview_urls": true,
   "routes": [
     {
       "custom_domain": true,
-      "pattern": "docs.islanddao.org"
-    }
-  ]
+      "pattern": "docs.islanddao.org",
+    },
+  ],
 }
