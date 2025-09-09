@@ -10,5 +10,11 @@
   },
   "observability": {
     "enabled": true
-  }
+  },
+  "routes": [
+    {
+      "custom_domain": true,
+      "pattern": "docs.islanddao.org"
+    }
+  ]
 }
