@@ -1,0 +1,55 @@
+---
+// src/components/overrides/PageTitle.astro
+import DefaultPageTitle from '@astrojs/starlight/components/PageTitle.astro'
+
+const { entry } = Astro.locals.starlightRoute
+const data = entry?.data ?? {}
+const hide = data.hidePageTitle === true
+---
+
+{
+  hide ? (
+    <h1 id="_top" class="sl-hidden-title sr-only">
+      {data.title}
+    </h1>
+  ) : (
+    <DefaultPageTitle />
+  )
+}
+
+<style is:global>
+  /* tweak the gap below the topbar hairline (only when the title is hidden) */
+  :root {
+    --sl-gap-after-topbar: 12px;
+  } /* try 8px, 16px, etc. */
+
+  /* 1) Neutralize the *title* panel’s own spacing (no leftover gap) */
+  main .sl-content-panel:has(h1#_top.sl-hidden-title),
+  main .content-panel:has(h1#_top.sl-hidden-title) {
+    border: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 2) The very next panel (your markdown content):
+        remove any divider and add a small top padding */
+  main .sl-content-panel:has(h1#_top.sl-hidden-title) + .sl-content-panel,
+  main .content-panel:has(h1#_top.sl-hidden-title) + .content-panel {
+    border-top: 0 !important;
+    box-shadow: none !important;
+    background-image: none !important;
+
+    margin-top: 0 !important;
+    padding-top: var(--sl-gap-after-topbar) !important; /* <— the new gap */
+    position: relative;
+  }
+
+  /* 3) If the divider is a pseudo-element, remove it */
+  main .sl-content-panel:has(h1#_top.sl-hidden-title) + .sl-content-panel::before,
+  main .sl-content-panel:has(h1#_top.sl-hidden-title) + .sl-content-panel::after,
+  main .content-panel:has(h1#_top.sl-hidden-title) + .content-panel::before,
+  main .content-panel:has(h1#_top.sl-hidden-title) + .content-panel::after {
+    content: none !important;
+    display: none !important;
+  }
+</style>

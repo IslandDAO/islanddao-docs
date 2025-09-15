@@ -4,11 +4,83 @@
 @import 'tailwindcss/theme.css' layer(theme);
 @import 'tailwindcss/utilities.css' layer(utilities);
 
+@layer components {
+  /* Light = near-black; Dark = mint accent */
+  .sl-markdown-content h4,
+  .prose h4 {
+    @apply dark:text-accent-100 text-gray-950;
+  }
+
+  /* Keep links inside H4 the same color */
+  .sl-markdown-content h4 a,
+  .prose h4 a {
+    color: inherit;
+  }
+}
+
 @theme {
   /*
 	Configure your Tailwind theme that will be used by Starlight.
 	https://starlight.astro.build/guides/css-and-tailwind/#styling-starlight-with-tailwind
 	*/
+
+  --color-gray-50: #f6f6f6;
+  --color-gray-100: #eeeeee;
+  --color-gray-200: #dadada;
+  --color-gray-300: #c8c8c8;
+  --color-gray-400: #a8a8a8;
+  --color-gray-500: #8b8b8b;
+  --color-gray-600: #6d6d6d;
+  --color-gray-700: #525252;
+  --color-gray-800: #373737;
+  --color-gray-900: #1f1f1f;
+  --color-gray-950: #131313;
+  --color-accent-50: #def7e2;
+  --color-accent-100: #bff1c8;
+  --color-accent-200: #99d8a5;
+  --color-accent-300: #83bb8e;
+  --color-accent-400: #6f9e78;
+  --color-accent-500: #598060;
+  --color-accent-600: #46664c;
+  --color-accent-700: #344c38;
+  --color-accent-800: #223526;
+  --color-accent-900: #121e14;
+  --color-accent-950: #0a130c;
+}
+
+/* Force a deep canvas on dark theme (page, sidebar, topbar). */
+:root[data-theme='dark'] {
+  /* Starlight reads these Tailwind theme tokens for backgrounds/borders */
+  --color-gray-950: #010c0c; /* main page canvas */
+  --color-gray-900: #010c0c; /* surfaces like header/sidebar often use 900 */
+
+  /* Extra safety: hit Starlight’s surface vars if your version exposes them */
+  --sl-color-bg: #010c0c;
+  --sl-color-bg-nav: #010c0c;
+  --sl-color-bg-sidebar: #010c0c;
+}
+
+/* 1) Pick a divider color from your theme */
+:root[data-theme='dark'] {
+  --sl-color-hairline: var(--color-gray-800); /* adjust: 700 = brighter, 850 = subtler */
+  /* Fallback for older Starlight that used gray-6 for borders */
+  --sl-color-gray-6: var(--sl-color-hairline);
+}
+
+/* 2) Paint the separators on the MAIN content column
+      - top inset line = separator under header
+      - left inset line = separator next to the global sidebar
+*/
+html[data-theme='dark'] main {
+  /* two crisp 1px lines, no background changes */
+  box-shadow:
+    inset 0 1px 0 var(--sl-color-hairline),
+    /* horizontal hairline under header */ inset 1px 0 0 var(--sl-color-hairline); /* vertical hairline next to sidebar */
+}
+
+/* (Optional) If your main has its own background, keep it dark */
+html[data-theme='dark'] main {
+  background-color: transparent;
 }
 
 /*

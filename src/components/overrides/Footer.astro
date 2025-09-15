@@ -1,0 +1,27 @@
+---
+// src/components/overrides/Footer.astro
+import DefaultFooter from '@astrojs/starlight/components/Footer.astro'
+const year = new Date().getFullYear()
+---
+
+<!-- Keep Starlight’s original footer (includes Prev/Next) -->
+<DefaultFooter />
+
+<!-- Add your site footer below it -->
+<footer role="contentinfo" class="islanddao-footer mt-8">
+  <div class="sl-container mx-auto px-6 py-8 text-center text-sm text-gray-700 dark:text-gray-400">
+    © {year} IslandDAO. All rights reserved.
+  </div>
+</footer>
+
+<style is:global>
+  /* Subtle separator above your footer; respects your dark canvas */
+  html[data-theme='dark'] .islanddao-footer {
+    box-shadow: inset 0 1px 0 var(--sl-color-hairline);
+    background: transparent;
+  }
+  html:not([data-theme='dark']) .islanddao-footer {
+    border-top: 1px solid var(--color-gray-200);
+    background: transparent;
+  }
+</style>
