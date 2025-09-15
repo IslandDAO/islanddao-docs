@@ -12,8 +12,13 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'IslandDAO',
-      logo: { light: '/public/logo-dark.png', dark: '/public/logo-light.png', replacesTitle: true },
-      favicon: '/public/favicon.png',
+      logo: {
+        light: './src/assets/logo-dark.png',
+        dark: './src/assets/logo-light.png',
+        alt: 'IslandDAO',
+        replacesTitle: true,
+      },
+      favicon: '/favicon.png',
       social: [
         { icon: 'github', label: 'GitHub', href: 'https://github.com/IslandDAO' },
         { icon: 'discord', label: 'Discord', href: 'https://discord.gg/dvHrj9SXQS' },
