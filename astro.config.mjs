@@ -40,7 +40,7 @@ export default defineConfig({
           items: [
             {
               label: 'Feedback Sessions',
-              collapsed: true,
+              collapsed: false,
               items: [
                 { label: 'Overview', slug: 'we_provide/feedback/feedback_overview' },
                 { label: 'Feedback Reviews', slug: 'we_provide/feedback/feedback_review' },
@@ -49,7 +49,7 @@ export default defineConfig({
             },
             {
               label: 'Grants Program',
-              collapsed: true,
+              collapsed: false,
               items: [
                 { label: 'Overview', slug: 'we_provide/grants/grants_overview' },
                 { label: 'Decentragrant', slug: 'we_provide/grants/decentragrant' },
@@ -59,7 +59,7 @@ export default defineConfig({
             { label: 'Hackathon Judging', slug: 'we_provide/hackathon' },
             {
               label: 'Events',
-              collapsed: true,
+              collapsed: false,
               items: [
                 { label: 'Overview', slug: 'we_provide/events/events_overview' },
                 { label: 'AthensDAO event', slug: 'we_provide/events/athensdao' },
