@@ -23,6 +23,7 @@ export default defineConfig({
         { icon: 'github', label: 'GitHub', href: 'https://github.com/IslandDAO' },
         { icon: 'discord', label: 'Discord', href: 'https://discord.gg/dvHrj9SXQS' },
         { icon: 'x.com', label: 'Twitter', href: 'https://x.com/islanddao' },
+        { icon: 'youtube', label: 'Youtube', href: 'https://www.youtube.com/@IslandDAO' },
       ],
       sidebar: [
         {
@@ -86,10 +87,6 @@ export default defineConfig({
         {
           label: 'OUR PARTNERS',
           items: [{ label: 'Partners', slug: 'partners/partners' }],
-        },
-        {
-          label: 'OUR SOCIALS',
-          items: [{ label: 'Official Links', slug: 'socials/socials' }],
         },
       ],
       customCss: ['./src/styles/global.css'],
