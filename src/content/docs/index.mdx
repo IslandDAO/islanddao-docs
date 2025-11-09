@@ -1,39 +1,74 @@
 ---
-title: IslandDAO Docs
-description: Welcome to Island DAO's official documentation site.
+title: Welcome to IslandDAO!
+description: Learn more about Island DAO, our mission, and what sets us apart in the Web3 space.
 tableOfContents: false
 hidePageTitle: true
-template: splash
-next:
-  link: network_state/how_to_join
-  label: OUR NETWORK STATE
 ---
 
-import banner from './_media/islandDAO_banner.png'
+import light_logo from './_media/islandDAO_white_logo.png'
+import dark_logo from './_media/islandDAO_black_logo.png'
+
 import { Image } from 'astro:assets'
 
-<Image src={banner} alt="IslandDAO Banner" width="1200" height="600" />
+<div class="not-prose mt-8 mb-12">
+  <div class="relative mx-auto h-20 w-20" aria-hidden="true">
+    <div class="pointer-events-none absolute inset-0 opacity-0">
+      <Image src={dark_logo} alt="" width="800" height="800" class="h-full w-full object-contain" />
+    </div>
+    <Image
+      src={dark_logo}
+      alt="Island DAO Logo"
+      width="800"
+      height="800"
+      class="absolute inset-0 h-full w-full object-contain dark:hidden"
+    />
+    <Image
+      src={light_logo}
+      alt="Island DAO Logo"
+      width="800"
+      height="800"
+      class="absolute inset-0 hidden h-full w-full object-contain dark:block"
+    />
+  </div>
+</div>
 
 # WELCOME TO ISLAND DAO!
 
-IslandDAO (formerly DeanslistDAO) is a service DAO consisting of Web3 power users who provide valuable feedback sessions, as well as a variety of other services and consultation to projects wishing to succeed in the space or simply seeking to refine their products for an overall better user experience.
+#### Who We Are
 
-To fully appreciate what we do, it’s important to understand the foundation we’re built on: the concept of a DAO.
+We are **IslandDAO** — a community-first decentralized autonomous organization built to empower builders, creators, and founders worldwide.  
+Our premise is simple: when everyone takes initiative, collective intelligence and real-world impact follow.  
+We operate through **transparent governance**, **open participation**, and **shared ownership**.
 
-#### WHAT IS A DAO AND WHY DOES IT MATTER?
+We are building toward a **Network State** — a global, digital-first community that also establishes physical nodes of collaboration and infrastructure.  
+In alignment with the concept introduced by Balaji Srinivasan:
 
-A DAO, or Decentralized Autonomous Organization, represents a new kind of organization native to blockchain technology. Unlike traditional companies or institutions, DAOs operate through smart contracts, self-executing code that sets the rules, much like bylaws or regulations in the physical world.
+> “A highly aligned online community with a capacity for collective action that crowdfunds territory around the world and eventually gains diplomatic recognition.”  
+> [Learn more → thenetworkstate.com](https://thenetworkstate.com)
 
-This smart contract governance allows DAO members to actively participate in decisions through on-chain voting, creating a decentralized, transparent, and democratic structure. In essence, **DAOs put power into the hands of stakeholders rather than a central authority, enabling collective action, automated financial processes, and fair distribution of rewards based on contribution.**
+Our vision is to fuse **on-chain governance**, **real-world spaces**, and **global community** into one ecosystem that lives both online and offline.
 
-Service DAOs, such as IslandDAO, are an excellent example of how DAOs are changing the way organizations function.
+---
 
-#### FROM DAO TO SERVICE DAO: WHAT SETS US APART?
+#### How We Do It
 
-Having morphed from a subDAO under Grape Protocol in 2022 to an autonomous network state of Web3 experts, IslandDAO is notable for being one of the first Service DAOs on Solana. However, what is a Service DAO exactly?
+We live by the DAO principle: **anyone can propose, anyone can contribute, anyone can lead.**  
+Our governance is bottom-up — members initiate projects, vote on treasury allocations, build partnerships, and create value.  
+The community is the engine; citizens are stakeholders and co-creators shaping IslandDAO’s direction through on-chain decision-making.
 
-Simply put, a Service DAO brings together specialists who collaborate to provide valuable services such as feedback, testing, and consulting to Web3 projects. The revenue earned from these services is pooled into the DAO’s treasury, which supports ongoing operations, infrastructure, and rewards contributors who actively participate.
+Our network-state model is both **global and distributed**.  
+[Digitally,](https://linktr.ee/islanddao) we connect through governance platforms and community channels, enabling seamless coordination and participation.  
+Physically, we manifest through **co-living and co-working hubs**, **retreats**, and shared **infrastructure** that bring builders together across the world.
 
-Our network blends deep Web3 knowledge with Solana protocols to increase ecosystem quality and enhance user experiences. With the help of professional recommendation, this strategy guarantees that projects flourish rather than just get off the ground.
+Our mission is to **enable builders everywhere** to access community, infrastructure, capital, and governance — empowering them to launch ventures, collaborate globally, and live the values of decentralization.
 
-### Welcome to our world!
+To achieve this, we:
+
+- Build and support a global network of aligned creators
+- Provide on-chain governance, grant funding, and shared resources
+- Develop real-world collaboration nodes through events and residencies
+- Sustain a treasury model and membership utility that keeps value cycling within the community
+
+---
+
+IslandDAO is a living experiment — an evolving effort to prove that a truly decentralized community can organize, govern, and build together across both digital and physical frontiers.

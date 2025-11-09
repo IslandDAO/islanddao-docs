@@ -27,70 +27,43 @@ export default defineConfig({
       ],
       sidebar: [
         {
+          label: 'WELCOME',
+          items: [{ label: 'About Us', slug: 'index' }],
+        },
+        {
           label: 'OUR NETWORK STATE',
           items: [
-            { label: 'How to Join / Becoming a Citizen', slug: 'network_state/how_to_join' },
-            { label: 'Commmunity Roles', slug: 'network_state/community_roles' },
-            { label: 'Contributions', slug: 'network_state/contributions' },
-            { label: 'Token ($ISLAND)', slug: 'network_state/token' },
-            { label: 'On-Chain Governance', slug: 'network_state/governance' },
+            { label: 'Why Join', slug: 'network_state/why_join' },
+            { label: 'How to Join', slug: 'network_state/how_to_join' },
           ],
         },
         {
-          label: 'WHAT WE PROVIDE',
+          label: 'ON-CHAIN GOVERNANCE',
           items: [
-            {
-              label: 'Feedback Sessions',
-              collapsed: false,
-              items: [
-                { label: 'Overview', slug: 'we_provide/feedback/feedback_overview' },
-                { label: 'Feedback Reviews', slug: 'we_provide/feedback/feedback_review' },
-                { label: 'Feedback Live Bonanza', slug: 'we_provide/feedback/feedback_bonanza' },
-              ],
-            },
-            {
-              label: 'Grants Program',
-              collapsed: false,
-              items: [
-                { label: 'Overview', slug: 'we_provide/grants/grants_overview' },
-                { label: 'Decentragrant', slug: 'we_provide/grants/decentragrant' },
-                { label: 'Metaplex Grant', slug: 'we_provide/grants/metaplex_grant' },
-              ],
-            },
-            { label: 'Hackathon Judging', slug: 'we_provide/hackathon' },
-            {
-              label: 'Events',
-              collapsed: false,
-              items: [
-                { label: 'Overview', slug: 'we_provide/events/events_overview' },
-                { label: 'AthensDAO event', slug: 'we_provide/events/athensdao' },
-                { label: 'IslandDAO event', slug: 'we_provide/events/islanddao' },
-              ],
-            },
+            { label: 'Token ($ISLAND)', slug: 'on_chain_governance/token' },
+            { label: 'DAO Governance', slug: 'on_chain_governance/governance' },
           ],
         },
         {
-          label: 'OUR ON-CHAIN TOOLS',
+          label: 'THE ISLAND DAO EVENTS',
+          // collapsed: false,
           items: [
-            { label: 'Realms', slug: 'tools/realms' },
-            { label: 'PubKey', slug: 'tools/pubkey' },
-            { label: 'Metaplex', slug: 'tools/metaplex' },
+            { label: 'Overview', slug: 'we_provide/events/events_overview' },
+            { label: 'IslandDAO event', slug: 'we_provide/events/islanddao' },
           ],
         },
         {
-          label: 'OUR NFT MARKETPLACE',
+          label: 'GRANTS PROGRAM',
           items: [
-            { label: 'Magic Eden', slug: 'nft/magic_eden' },
-            { label: 'Tensor', slug: 'nft/tensor' },
+            { label: 'Overview', slug: 'we_provide/grants/grants_overview' },
+            { label: 'Decentragrant', slug: 'we_provide/grants/decentragrant' },
+            { label: 'Metaplex Grant', slug: 'we_provide/grants/metaplex_grant' },
           ],
-        },
-        {
-          label: 'OUR PARTNERS',
-          items: [{ label: 'Partners', slug: 'partners/partners' }],
         },
       ],
       customCss: ['./src/styles/global.css'],
       components: {
+        SocialIcons: './src/components/overrides/SocialIcons.astro',
         PageTitle: './src/components/overrides/PageTitle.astro',
         Footer: './src/components/overrides/Footer.astro',
       },
