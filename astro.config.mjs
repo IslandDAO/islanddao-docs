@@ -55,9 +55,9 @@ export default defineConfig({
         {
           label: 'GRANTS PROGRAM',
           items: [
-            { label: 'Overview', slug: 'we_provide/grants/grants_overview' },
-            { label: 'Decentragrant', slug: 'we_provide/grants/decentragrant' },
-            { label: 'Metaplex Grant', slug: 'we_provide/grants/metaplex_grant' },
+            { label: 'Overview', slug: 'grants_program/grants_overview' },
+            { label: 'Decentragrant', slug: 'grants_program/decentragrant' },
+            { label: 'Metaplex Grant', slug: 'grants_program/metaplex_grant' },
           ],
         },
       ],
