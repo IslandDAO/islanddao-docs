@@ -5,22 +5,148 @@ tableOfContents: false
 ---
 
 import gov1 from './_media/gov1.png'
-import gov2 from './_media/gov2.png'
-import gov3 from './_media/gov3.png'
+import realms from './_media/realms_logo.svg'
+import metadao from './_media/metadao_logo.svg'
 import { Image } from 'astro:assets'
 
-At IslandDAO, we don't just believe in decentralization, we live it. Through on-chain governance, we offer our members a way to participate in real, meaningful decisions, all transparently recorded on the blockchain. This is governance without intermediaries. Every rule is written in code, every action is executed by smart contracts, and every vote is a signature of community consensus Our DAO operates like a digital organization. It can own assets, initiate transactions, and upgrade smart contracts, all actions triggered only by collective agreement. Nothing moves without a vote. This structure ensures that no single party holds control and that every decision leaves a permanent mark on-chain.
+Governance is at the heart of what defines us. Our goal is to make participation **easy, effective, and fair**, experimenting with different on-chain governance frameworks that give citizens real influence over the DAO’s evolution.
 
-<Image src={gov1} alt="On-chain governance" width="1000" height="400" />
+<Image src={gov1} alt="IslandDAO governance" />
 
-On **Solana**, we’re empowered by the SPL-governance suite, designed for speed, accessibility, and efficiency. With low transaction fees and rapid finality, our governance model is truly open. Anyone with the right to participate can do so without barriers, making voting more inclusive and active across the board.
+Our governance mechanisms combine **token-based**, **Sowellian**, and **Futarchy** models, all powered by the **$ISLAND** token.  
+This multi-framework approach makes IslandDAO the first DAO to experiment with all three systems in parallel, pioneering new ways of achieving decentralized decision-making.
 
-Our governance interface is powered by **Realms**, the user-friendly UI for the SPL-Governance program. Through Realms, members can create DAOs, manage proposals, vote on initiatives, and oversee treasury activity with ease.
+---
 
-<Image src={gov2} alt="On-chain governance" width="1000" height="400" />
+#### Governance Participation
 
-We defines our own structure: **voting rights** might be weighted by token quantity depending on the amount of $ISLAND token a member deposits or locked in realms, tokens delegated by one member to another, by NFT ownership (Our latest NFT Perks feature), or in some cases, evenly distributed per wallet. **Proposals** can be member-submitted or routed through a council, depending on governance setup. Once approved, the execution is handled entirely on-chain, automated, immutable, and free from human interference.
+All **$ISLAND token holders** are eligible to participate in IslandDAO governance.  
+Voting power is directly proportional to the amount of $ISLAND held or locked within Realms, enabling open and community-driven decision-making.
 
-This is what we provide: not just tools or access, but a living governance structure where every decision counts, every action is transparent, and the direction is shaped by those who show up.
+- **To vote:** Deposit $ISLAND tokens onto [Realms](https://v2.realms.today/dao/F9V4Lwo49aUe8fFujMbU6uhdFyDRqKY54WpzdpncUSk9/proposals) to receive voting power. You can cast a _Yes_ or _No_ vote on active proposals.
+- **To propose:** You must have a minimum of **100,000 $ISLAND** tokens deposited as voting power to create a new proposal on Realms.
 
-<Image src={gov3} alt="On-chain governance" width="1000" height="400" />
+IslandDAO operates a **hybrid governance model**:
+
+- **Multi-Sig Voting** — Managed by a five-member **Council**, elected by the community. Each council member holds a unique Council Token that enables voting on multi-sig proposals and hardcoded veto power to block malicious or security-risk proposals.
+- **Token-Based Voting** — Open to all citizens via Realms, with defined quorum and approval thresholds.
+
+---
+
+<h4
+  style={{
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: '8px',
+    marginTop: '2rem',
+    lineHeight: '1.2',
+  }}
+>
+  <img
+    src={realms.src}
+    alt="Realms logo"
+    width="30"
+    height="30"
+    style={{
+      transform: 'translateY(7px)', // this fixes the "too high" problem
+      flexShrink: 0,
+    }}
+  />
+  Token-Based Governance
+</h4>
+
+IslandDAO uses the open-source **SPL Governance** smart contract on **Solana**, accessed through the **Realms** interface.  
+Here, $ISLAND tokens are deposited to vote on proposals related to:
+
+- Treasury management
+- Community initiatives
+- Council elections and governance upgrades
+
+We use a **VSR (Vote Stake Registry) plugin**, allowing members to optionally lock their tokens for a set period and receive a **voting power multiplier** based on the duration of the lock-up.  
+All votes and results are recorded transparently on-chain.
+
+[Learn more →](https://docs.realms.today/)
+
+---
+
+<h4
+  style={{
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: '8px',
+    marginTop: '2rem',
+    lineHeight: '1.2',
+  }}
+>
+  <img
+    src={realms.src}
+    alt="Realms logo"
+    width="30"
+    height="30"
+    style={{
+      transform: 'translateY(7px)', // this fixes the "too high" problem
+      flexShrink: 0,
+    }}
+  />
+  Sowellian Governance
+</h4>
+
+**Sowellian Governance** introduces a prediction-based model where citizens bond $ISLAND tokens to propose ideas and attach measurable **Key Performance Indicators (KPIs)**.  
+Members place one-way _YES_ or _NO_ bets (using $ISLAND) that remain locked until the proposal settles.  
+If quorum is met and _YES_ outweighs _NO_, the proposed action is executed. After the evaluation window, the KPI outcome determines the winning side.  
+Losing stakes are redistributed pro-rata to the winners, with a small rake directed to the treasury.
+
+IslandDAO is the **first community to implement Sowellian Governance** in practice, expanding the boundaries of how decentralized decision-making can function.
+
+[Learn more →](https://sowelliangovernance.org/)
+
+---
+
+<h4
+  style={{
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: '8px',
+    marginTop: '2rem',
+    lineHeight: '1.2',
+  }}
+>
+  <img
+    src={metadao.src}
+    alt="Realms logo"
+    width="30"
+    height="30"
+    style={{
+      transform: 'translateY(8px)', // this fixes the "too high" problem
+      flexShrink: 0,
+    }}
+  />
+  Futarchy
+</h4>
+
+**Futarchy** enables the DAO to trade on the expected outcomes of proposals using $ISLAND.  
+Instead of voting directly, members buy and sell outcome tokens in a prediction market that reflects their confidence in a proposal’s success.  
+When the market resolves, the proposal associated with the higher-value outcome is automatically enacted.  
+This approach allows governance to align with collective intelligence rather than simple majority votes.
+
+[Learn more →](https://docs.metadao.fi/)
+
+---
+
+#### Treasury Overview
+
+IslandDAO’s treasury is held securely within the **Realms** smart contract, divided into distinct accounts for transparency and operational clarity.  
+Each wallet is governed on-chain through token-based proposals and subject to council oversight.
+
+| Treasury                        | Address                                      |
+| ------------------------------- | -------------------------------------------- |
+| **IslandDAO Treasury**          | 7A6CrNWAFFBpQTBRo5fULibqqB3MouNLgbVBf8D3MJAx |
+| **Community Reserve ($ISLAND)** | DY9NzNSbbDJk4NYXN2TBMkF8oBbZaq7UYSy3VzKcviNS |
+| **Liquidity Reserve ($ISLAND)** | EZ3V9DRoUpewNyNTyG3ya7TiPwe27XGDCgFHgfXNprJX |
+| **Strategic Reserve ($ISLAND)** | FThth1Uwkw1JJKMkKohpgiEshYKZojMpfhGHMf2rLZNR |
+
+#### The IslandDAO Governance Ethos
+
+Governance at IslandDAO is not static — it’s a **living system** that evolves with the community.  
+We treat governance as a continuous experiment, blending on-chain mechanics with social consensus to achieve coordination at scale.  
+Every citizen has the right — and the responsibility — to participate in shaping the DAO’s direction, ensuring IslandDAO remains transparent, accountable, and collectively owned.

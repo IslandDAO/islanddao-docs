@@ -45,11 +45,13 @@ export default defineConfig({
           ],
         },
         {
-          label: 'THE ISLAND DAO EVENTS',
+          label: 'THE ISLAND DAO EVENT',
           // collapsed: false,
           items: [
-            { label: 'Overview', slug: 'we_provide/events/events_overview' },
-            { label: 'IslandDAO event', slug: 'we_provide/events/islanddao' },
+            { label: 'What Is It', slug: 'events/what_is_it' }, //Overview?
+            { label: 'Why Attend', slug: 'events/why_go' },
+            { label: 'How to Apply', slug: 'events/how_to_apply' },
+            { label: 'FAQ', slug: 'events/faq' },
           ],
         },
         {
